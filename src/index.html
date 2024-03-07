@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="h-full">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intersection Observer</title>
+    <link href="output.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- prettier-ignore -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+  </head>
+  <body class="h-full bg-dracula-darker text-dracula-light">
+    <header class="min-h-full border-b-[1px] border-b-dracula-purple">
+      <!-- Header -->
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <nav class="flex items-center justify-between h-16">
+          <h1>Intersection Observer</h1>
+
+          <ul class="flex items-center gap-x-5">
+            <li>Docs</li>
+            <li>About</li>
+            <li>Products</li>
+            <li>Billing</li>
+          </ul>
+        </nav>
+        <!-- Main -->
+      </div>
+    </header>
+
+    <main
+      class="mt-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ... flex flex-col gap-y-10 pb-32">
+      <!-- Clone Army -->
+
+      <!-- 
+
+        Append the following (animation) classes after the '...'
+
+        entering: 
+          - from: opacity-0 blur-md
+          - animation: 
+             - animate-slide-up
+
+      -->
+      <div
+        class="clone max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32 ... opacity-0 blur-md">
+        <h2
+          class="text-dracula-light font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa.
+        </h2>
+        <p
+          class="mt-6 text-lg text-dracula-blue text-dracula-light/70 text-center max-w-3xl mx-auto">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+          expedita mollitia. Velit, quo id neque quas necessitatibus labore
+          voluptas repellat officiis, reprehenderit cupiditate doloribus
+          consequuntur voluptatem temporibus! Odit?
+        </p>
+        <div class="text-center pt-10">
+          <button
+            type="button"
+            class="rounded-lg px-6 h-12 bg-dracula-purple bg-opacity-80 hover:bg-opacity-95 focus:ring-2 focus:ring-dracula-cyan focus:ring-offset-2 focus:ring-offset-dracula-darker">
+            <span class="text-dracula-light font-sm font-semibold">
+              Get Started
+            </span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <p class="h-16 px-4 text-dracula-light/50">
+        Copyright &copy; Lightzane 2024
+      </p>
+    </footer>
+  </body>
+</html>

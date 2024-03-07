@@ -1,0 +1,16 @@
+{
+  "name": "learn-intersection-observer",
+  "version": "1.0.0",
+  "description": "Intersection Observer is an amazing tool in JavaScript\r that allows you to easily and efficiently do pretty much anything based on the visibility of elements. This is perfect for scroll animations, lazy loading images, infinite scroll, and much more. Also, Intersection Observer is incredibly performant and flexible which makes it by far the best approach.",
+  "main": "index.js",
+  "scripts": {
+    "start": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
