@@ -15,6 +15,26 @@
     <script src="script.js" defer></script>
   </head>
   <body class="h-full bg-dracula-darker text-dracula-light">
+    <!-- Back to Top -->
+    <div class="z-10 fixed inset-0 pointer-events-none">
+      <div class="flex justify-center mt-24">
+        <!-- 
+          entering:
+            - from: opacity-0 pointer-events-none
+            - to: opacity-1 pointer-events-auto
+        -->
+        <div
+          id="back_to_top"
+          class="transition ease-in-out duration-500 shadow-lg ... opacity-0">
+          <button
+            type="button"
+            class="rounded-3xl bg-dracula-orange text-dracula-darker px-4 py-2 hover:bg-dracula-blue hover:text-dracula-light transition duration-500 focus:ring-2 focus:ring-dracula-cyan focus:outline-none">
+            <span class="text-sm font-semibold">Back to top</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <header class="min-h-full border-b-[1px] border-b-dracula-purple">
       <!-- Header -->
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -76,5 +96,43 @@
         Copyright &copy; Lightzane 2024
       </p>
     </footer>
+
+    <script defer>
+      const back_to_top = document.getElementById('back_to_top');
+      const entering = ['opacity-1', 'pointer-events-auto'];
+      const leaving = ['opacity-0', 'pointer-events-none'];
+      let lastScrollY = window.scrollY;
+
+      function enter() {
+        back_to_top.classList.add(...entering);
+        back_to_top.classList.remove(...leaving);
+      }
+
+      function leave() {
+        back_to_top.classList.remove(...entering);
+        back_to_top.classList.add(...leaving);
+      }
+
+      window.addEventListener('scroll', () => {
+        // scrolling UP
+        if (lastScrollY > window.scrollY) {
+          enter();
+        }
+
+        // scrolling down
+        else {
+          leave();
+        }
+
+        lastScrollY = window.scrollY;
+      });
+
+      back_to_top.addEventListener('click', () => {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+          leave();
+        }, 500);
+      });
+    </script>
   </body>
 </html>
